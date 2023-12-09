@@ -15,9 +15,13 @@ public class CommentaryService {
         return commentaryRepository.save(commentary);
     }
 
-    public List<Commentary> getAllCommentaries(Long publicWorksId) {
-        return commentaryRepository.findByPublicWorksId(publicWorksId);
+    public List<Commentary> getAllCommentaries() {
+        return commentaryRepository.findAll();
     }
+
+    // public List<Commentary> getAllCommentaries(Long publicWorksId) {
+    //     return commentaryRepository.findByPublicWorksId(publicWorksId);
+    // }
 
     public Optional<Commentary> getCommentaryById(Long id) {
         return commentaryRepository.findById(id);

@@ -2,6 +2,8 @@ package com.smd.todeolho.Image;
 
 import jakarta.persistence.*;
 
+import java.sql.Blob;
+
 @Entity
 @Table(name = "image")
 public class Image {
@@ -9,7 +11,7 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Byte[] content;
+    private Blob content;
 
     public Long getId() {
         return id;
@@ -19,11 +21,11 @@ public class Image {
         this.id = id;
     }
 
-    public Byte[] getContent() {
+    public Blob getContent() {
         return content;
     }
 
-    public void setContent(Byte[] content) {
+    public void setContent(Blob content) {
         this.content = content;
     }
 }

@@ -19,7 +19,9 @@ public class CommentaryController {
 
     @GetMapping("/public-works/{id}")
     public List<Commentary> getAllCommentaries(@PathVariable("public-works") Long publicWorksId) {
-        return commentaryService.getAllCommentaries(publicWorksId);
+        // return commentaryService.getAllCommentaries(publicWorksId);
+        return commentaryService.getAllCommentaries();
+
     }
 
     @GetMapping("/{id}")
